@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import styled from 'styled-components'
-import { StyledBtn, SuperButton } from './components/Button.styled'
+import { StyledBtn } from './components/Button.styled'
 import { Link } from './components/Link.styled';
 import { Menu } from './components/Menu.styled';
 
@@ -9,18 +9,16 @@ import { Menu } from './components/Menu.styled';
 function App() {
 	return (
 		<div className="App">
-			<Menu>
-				<ul>
-					<li><a href="">menu item 1</a></li>
-					<li><a href="">menu item 2</a></li>
-					<li><a href="">menu item 3</a></li>
-				</ul>
-			</Menu>
 			<Box>
-				<StyledBtn as={Link} href='https://www.google.com/'>LinkComponent</StyledBtn>
-				<StyledBtn as='a' href='https://www.google.com/'>Link</StyledBtn>
-				<StyledBtn>Hello</StyledBtn>
-				<SuperButton>Super Button</SuperButton>
+				{/* <StyledBtn color={'green'} fontSize={'20px'}>Hello</StyledBtn>
+				<StyledBtn color={'red'}>Hello</StyledBtn>
+				<StyledBtn fontSize='30px'>Hello</StyledBtn> */}
+
+				{/* <StyledBtn color='green' primary>Hello</StyledBtn>
+				<StyledBtn color='green' outlined>Hello</StyledBtn> */}
+
+				<StyledBtn color='green' btnType="primary" active>Hello</StyledBtn>
+				<StyledBtn color='green' btnType="outlined">Hello</StyledBtn>
 			</Box>
 		</div>
 	);
